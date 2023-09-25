@@ -57,6 +57,10 @@ for i in range(40):
 before_energy=np.array(data[['energy']].values).ravel()
 all_energy = np.concatenate((before_energy,pre_energy),axis=0)
 
+# 打印数据
+pre_145=pre_energy[0:5]
+pre_215=pre_energy[-5:]
+
 pre_population = []
 for i in range(40):
     pre_population=np.append(pre_population,future_predictions[i][0][0])
@@ -78,8 +82,6 @@ plt.legend()
 plt.show()
 
 # xpoints = np.array([2021,2022,2023,2024,2025])
-# pre_145=pre[0:5]
-# pre_215=pre[-5:]
 
 
 
